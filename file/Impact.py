@@ -12,7 +12,7 @@ def main ():
     #exportfile(output_list)
     
 def import_data():
-    with open('data.csv', newline='') as in_file:
+    with open('file\data.csv', newline='') as in_file:
         reader = csv.reader(in_file)
         birds = list(reader)
         birds.pop(0)

@@ -1,5 +1,5 @@
 from random import randint, random
-from bubble1 import bubblesort
+from selective1 import selectionsort
 from time import time 
 
 averagecase= [randint(1,10000) for _ in range(1000)]
@@ -8,19 +8,19 @@ worstcase= sorted(averagecase, reverse=True)
  
 def test_BubbleWorst():
     start= time()
-    assert bubblesort(worstcase) == bestcase
+    assert selectionsort(worstcase) == bestcase
     print("worst")
     print(time()-start)
  
 def test_BubbleBest():
     start= time()
-    assert bubblesort(bestcase) == bestcase
+    assert selectionsort(bestcase) == bestcase
     print("best")
     print(time()-start)
  
 def test_BubbleAvg():
     start= time()
-    assert bubblesort(averagecase) == bestcase
+    assert selectionsort(averagecase) == bestcase
     print("age")
     print(time()-start)
 
